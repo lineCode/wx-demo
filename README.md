@@ -1,21 +1,6 @@
-# demo
+# 仿wx-实现的demo
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
+## 启动项目
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
