@@ -1,0 +1,19 @@
+.click:active{
+  background: #e4e1e1;
+}
+.click:visited{
+  transition-duration: 1s;
+  background: red;
+}
+.c-10001{
+  color: #969494;
+}
+.f-size16{
+  font-size: 16px;
+}
+.f-size14{
+  font-size: 14px;
+}
+.f-size18{
+  font-size: 18px;
+}

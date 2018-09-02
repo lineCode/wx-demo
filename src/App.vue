@@ -1,29 +1,48 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="rows"><Header/></div>
+    <div class="rows">
+      <Scroll>
+        <router-view/>
+      </Scroll>
     </div>
-    <router-view/>
+    <div class="rows"><Tabbar/></div>
   </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import Tabbar from '@/components/Tabbar.vue'; // tabbar
+import Header from '@/components/Header.vue'; // 头部组件
+import Scroll from '@/components/Scroll.vue'; // 滚动组件
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@Component({
+  components: {
+    Tabbar,
+    Header,
+    Scroll,
+  },
+})
+export default class App extends Vue {
+
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+</script>
+<style lang="less">
+body,html{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 8% 81% 11%;
+  .rows{
+    height: 100%;
+    overflow: hidden;
   }
 }
 </style>
