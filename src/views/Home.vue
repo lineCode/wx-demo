@@ -45,7 +45,7 @@ export default class Home extends Vue {
     this.datalist.push(...res);
   }
 
-  public dialog(v: any): void{
+  public dialog(v: any): void {
     this.$router.push('/dialog');
   }
 }

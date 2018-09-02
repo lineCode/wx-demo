@@ -68,13 +68,13 @@ class Http {
    * @param url 请求url
    * @param params 请求参数 {}
    */
-  public async Post(url: string, params?: any): Data {
-    let response: Data = {};
+  public async Post(url: string, params?: any) {
+    let response: any = {};
     await this.request.post(url, params).then((res: any) => {
-      response = res
+      response = res;
     }).catch((error: any) => {
       console.log(error);
-    });;
+    });
     return response;
   }
 
@@ -84,10 +84,10 @@ class Http {
    * @param url 请求url
    * @param params 请求参数 {}
    */
-  public async Get(url: string, param?: any): any {
+  public async Get(url: string, param?: any) {
     let response: any = {};
-    await this.request.get(url).then((_res: any) => {
-      response = _res.data
+    await this.request.get(url).then((res: any) => {
+      response = res.data;
     }).catch((error: any) => {
       console.log(error);
     });
