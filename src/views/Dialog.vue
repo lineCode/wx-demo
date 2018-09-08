@@ -1,98 +1,35 @@
-<template>
-  <div class="container">
-    <div class="dialog">
-      <div class="headimg">
-        <img src="/headimg/4.jpg"/>
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="content">
-        到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了
-      </div>
-    </div>
-    <div class="dialog">
-      <div class="headimg">
-        <img src="/headimg/3.jpg"/>
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="content">
-        到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了到哪里了
-      </div>
-    </div>
-    <div class="dialog right">
-      <div class="content">
-        我到笋岗了。
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-    <div class="dialog right">
-      <div class="content">
-        好的
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-    <div class="dialog right">
-      <div class="content">
-        我到笋岗了。
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-    <div class="dialog">
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="content">
-        我到笋岗了。
-      </div>
-    </div>
-    <div class="dialog right">
-      <div class="content">
-        我到笋岗了。
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-
-    <div class="dialog right">
-      <div class="content">
-        我到笋岗了。
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-    <div class="dialog right">
-      <div class="content">
-        我到笋岗了。
-      </div>
-      <div class="bot"><div class="top"></div></div>
-      <div class="headimg">
-        <img src="/headimg/2.jpg"/>
-      </div>
-    </div>
-
-  </div>
-</template>
-
-<script lang="ts">
+<script lang="tsx">
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Dialog extends Vue {
-  public mounted() {
-    console.log(1);
+  public render(h: any) {
+    return (
+      <div class='container'>
+        <div class='dialog'>
+          <div class='headimg'>
+            <img src='/headimg/4.jpg'/>
+          </div>
+          <div class='text'>
+            <div class='bot'><div class='top'></div></div>
+            <div class='content'>
+              到哪里了
+            </div>
+          </div>
+        </div>
+
+        <div class='dialog right'>
+          <div class='content'>
+            我到笋岗了。
+          </div>
+          <div class='bot'><div class='top'></div></div>
+          <div class='headimg'>
+            <img src='/headimg/2.jpg'/>
+          </div>
+        </div>
+
+      </div>
+    );
   }
 }
 </script>
@@ -117,14 +54,13 @@ export default class Dialog extends Vue {
       border-bottom:8px solid transparent;
     }
   }
-}
-
-.headimg{
-  img{
-    width: 40px;
-    height: 40px;
+  .headimg{
+    img{
+      width: 40px;
+    }
   }
 }
+
 .content{
   position: relative;
   padding: 7px;
